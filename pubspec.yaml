@@ -1,0 +1,25 @@
+name: ceemax
+version: 0.1.0
+author: Dart Team <misc@dartlang.org>
+description: Ceemax.
+environment:
+  sdk: '>=1.9.0 <2.0.0'
+dependencies:
+  angular2: ^2.2.0
+  _discoveryapis_commons: ^0.1.0
+  browser: ^0.10.0+2
+  crypto: ^2.0.1
+  http: ^0.11.1
+  http_server: ^0.9.5+1
+  logging_handlers: ^0.8.0
+  rpc: ^0.5.0
+dev_dependencies:
+  dart_to_js_script_rewriter: ^1.0.1
+transformers:
+- angular2:
+    platform_directives:
+    - 'package:angular2/common.dart#COMMON_DIRECTIVES'
+    platform_pipes:
+    - 'package:angular2/common.dart#COMMON_PIPES'
+    entry_points: web/main.dart
+- dart_to_js_script_rewriter

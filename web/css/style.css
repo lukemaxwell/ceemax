@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Mode7";
+  src: url("/fonts/mode7gx3.ttf"); /* url('MODE7GX3.EOT');  /* .EOT is for IE */
+}
+
+@font-face {
+  font-family: "8bitwondernominal";
+  src: url("/fonts/8bitwondernominal.ttf"); /* url('MODE7GX3.EOT');  /* .EOT is for IE */
+}
+
+/*
+@media (max-width: @screen-xs) {
+  h1{font-size: 1em;}
+}
+
+@media (max-width: @screen-sm) {
+  h1{font-size: 1.2em;}
+}
+*/
+
+body {
+  background-color: #000000;
+  color: #ffffff; font-family: Mode7, monospace, courier, fixed;
+  font-style: normal;
+  font-size: 12pt;
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+  color: #ffffff;
+  background: #000000;
+  line-height: 20px;
+}
+
+a {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: #000000;
+  color: #ffffff;
+  border: 0;
+  margin-bottom: 0px;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+
+.nav>li>p {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.yellow {
+  color: #ffff00;
+}
+
+.blue {
+  color: #0000ff;
+}
+
+.light-blue {
+  color: #69d4ce;
+}
+
+.green {
+  color: #00ff0b;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.title-banner {
+  background-color: #0000ff;
+  color: #00ff0b;
+  vertical-align: middle;
+  text-align: center;
+  height: 100%;
+}
+
+.title-banner h1 {
+  font-size: 3em;
+  font-size: 4.0vw;
+  margin-left: 10px;
+  padding-top: 4px;
+  /*
+  padding-top: 10px;
+  padding-bottom: 15px;
+  */
+  /*text-shadow: 8px 8px #000000;*/
+  text-shadow: 0.5vw 0.5vw #000000;
+  font-family: '8bitwondernominal';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sub-heading {
+  font-size: 1.2em;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-weight: normal;
+  font-style: normal;
+  color: #01FE05;
+}
+
+.abc-banner {
+  vertical-align: middle;
+  height: 100%;
+  margin-top: 20px;
+  padding-top: 3px;
+}
+
+
+
+.abc {
+  font-size: 3em;
+  font-size: 4.0vw;
+  margin-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-family: '8bitwondernominal';
+  font-weight: normal;
+  font-style: normal;
+  background-color: #ffffff;
+  color: #000000;
+  padding-left: 10px;
+}
+
+
+.contents h2{
+  font-size: 1.2em;
+  color: #00bbb7;
+}
+
+
+.page-number {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  font-size: 1.2em;
+}
+
+.top-header {
+  margin-top: 10px;
+}
+
+#menu-toggle {
+  color: #0000FF;
+}
+
+

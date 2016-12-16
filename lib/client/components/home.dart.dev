@@ -1,0 +1,13 @@
+import 'dart:html';
+import 'package:angular2/core.dart';
+
+@Component(
+    selector: 'home',
+    template: '''
+        <h2>Yo, hommie!</h2>
+          '''
+)
+
+class HomeComponent {
+    DivElement someDiv;
+}

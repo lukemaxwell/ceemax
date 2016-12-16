@@ -1,0 +1,86 @@
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a id="title" [routerLink]="['Home']">
+          {{title}}
+        </a>
+      </li>
+      <li>
+        <a href="#">Create</a>
+      </li>
+      <li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <!-- .container -->
+    <div class="container">
+
+      <!-- .row -->
+      <div class="row">
+        <div class="col-lg-1">
+          <a href="#menu-toggle" id="menu-toggle">
+            <i class="fa fa-navicon fa-2x"></i>
+          </a>
+        </div>
+        <div class="col-lg-2 top-header">
+          <a id="title" [routerLink]="['Home']">
+            {{title}}
+          </a>
+        </div>
+        <div class="col-lg-2 top-header">
+          302
+        </div>
+        <div class="col-lg-7 top-header">
+          <div class="pull-right">
+            {{dateString}}
+            <span class="yellow" id="time">
+              {{hour}}:{{minute}}:{{second}}
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- .row -->
+      <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="abc-banner">
+            <span class="h1 abc">A</span>
+            <span class="h1 abc">B</span>
+            <span class="h1 abc">C</span>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-8">
+          <div class="title-banner">
+            <h1>
+              Football
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Router outlet -->
+      <router-outlet></router-outlet>
+
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- Page Content -->
+
+</div>
+<!-- /#wrapper -->
+
+
