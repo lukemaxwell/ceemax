@@ -12,9 +12,6 @@ import 'package:ceemax/server/ceemaxapi.dart';
 final bool debug = false;
 final ApiServer _apiServer = new ApiServer(prettyPrint: true);
 final String _buildPath = Platform.script.resolve('../build/web/').toFilePath();
-final String _devPath = Platform.script.resolve('../web/').toFilePath();
-
-final VirtualDirectory _clientDevDir = new VirtualDirectory(_devPath);
 final VirtualDirectory _clientDir = new VirtualDirectory(_buildPath);
 
 
@@ -43,16 +40,9 @@ Future requestHandler(HttpRequest request) async {
         // Server the requested file (path) from the virtual directory,
         // minus the preceding '/'. This will fail with a 404 Not Found
         // if the request is not for a valid file.
-        if (debug == true) {
-            var fileUri = new Uri.file(_devPath)
-                .resolve(request.uri.path.substring(1));
-            _clientDevDir.serveFile(new File(fileUri.toFilePath()), request);
-
-        } else {
-            var fileUri = new Uri.file(_buildPath)
-                .resolve(request.uri.path.substring(1));
-            _clientDir.serveFile(new File(fileUri.toFilePath()), request);
-        }
+        var fileUri = new Uri.file(_buildPath)
+            .resolve(request.uri.path.substring(1));
+        _clientDir.serveFile(new File(fileUri.toFilePath()), request);
     }
 }
 
@@ -64,7 +54,7 @@ Future main() async {
 
   // Set up a server serving the ceemax API.
   _apiServer.addApi(new CeemaxApi());
-  HttpServer server = await HttpServer.bind(InternetAddress.ANY_IP_V4, 8088);
+  HttpServer server = await HttpServer.bind(InternetAddress.ANY_IP_V4, 80);
   server.listen(requestHandler);
   print('Server listening on http://${server.address.host}:'
       '${server.port}');
