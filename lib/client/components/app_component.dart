@@ -26,7 +26,7 @@ import 'package:ceemax/common/services/fixture_service.dart';
         name: 'Fixtures',
         component: FixturesComponent),
     const Route(
-        path: '/home',
+        path: '/',
         name: 'Home',
         useAsDefault: true,
         component: HomeComponent),
